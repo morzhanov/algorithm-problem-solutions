@@ -25,4 +25,12 @@ func main() {
 	arr3 := [8]int{1, 2, 3, 4, 4, 5, 6, 7}
 	FindDuplicateElementInLimitedRangeArray(arr3[:])
 	fmt.Printf("\n")
+
+	str := "{{{{}}}}"
+	str2 := "{{{({}){([()])}}}}"
+	str3 := "{{{{}]}}}"
+	ValidateParentheses(str)
+	ValidateParentheses(str2)
+	ValidateParentheses(str3)
+	fmt.Printf("\n")
 }
