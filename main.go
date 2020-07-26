@@ -26,11 +26,19 @@ func main() {
 	FindDuplicateElementInLimitedRangeArray(arr3[:])
 	fmt.Printf("\n")
 
-	str := "{{{{}}}}"
+	str := "(){{{{}}}}"
 	str2 := "{{{({}){([()])}}}}"
 	str3 := "{{{{}]}}}"
 	ValidateParentheses(str)
 	ValidateParentheses(str2)
 	ValidateParentheses(str3)
+	fmt.Printf("\n")
+
+	str4 := "(((())))(((())))"
+	str5 := "(((()))))(())"
+	str6 := "(((())))(((((())))))"
+	LongestValidParentheses(str4)
+	LongestValidParentheses(str5)
+	LongestValidParentheses(str6)
 	fmt.Printf("\n")
 }

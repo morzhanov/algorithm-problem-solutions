@@ -7,31 +7,32 @@ import (
 // LongestValidParentheses test
 // given a string containing just the characters '(' and ')',
 // find the length of the longest valid (well-formed) parentheses substring.
-func LongestValidParentheses(arr []int) {
+func LongestValidParentheses(str string) {
 	arr := []rune(str)
-	n := len(arr)
-	chars := [6]rune{'(', ')', '{', '}', '[', ']'}
-	stack := make([]int, n)
+	stack := make([][]int, 0)
+	res := 0
 
-	for _, char := range arr {
-		idx := Pos(chars[:], char)
+	for i, char := range arr {
 
-		if idx == -1 {
-			fmt.Printf("String is not valid\n")
-			return
-		}
-
-		if idx%2 == 0 {
-			stack = append(stack, idx+1)
+		if char == '(' {
+			stack = append(stack, []int{0, i})
 		} else {
-			stackN := len(stack)
-			curr := stack[stackN-1]
-			stack = stack[:stackN-1]
-			if curr != idx {
-				fmt.Printf("String is not valid\n")
-				return
+			if len(stack) != 0 && stack[len(stack)-1][0] == 0 {
+				stack = stack[:len(stack)-1]
+				curr := 0
+				if len(stack) == 0 {
+					curr = i + 1
+				} else {
+					curr = stack[len(stack)-1][1]
+				}
+				if curr > res {
+					res = curr
+				}
+			} else {
+				stack = append(stack, []int{1, i})
 			}
 		}
 	}
-	fmt.Printf("String is valid\n")
+
+	fmt.Printf("Longest valid distance: %v\n", res)
 }
