@@ -2,15 +2,6 @@ package main
 
 import "fmt"
 
-func pos(arr []rune, val rune) int {
-	for p, v := range arr {
-		if v == val {
-			return p
-		}
-	}
-	return -1
-}
-
 // ValidateParentheses test
 // given a string containing just the characters '(){}[]'
 // return true if string has valid open-closed sequence of characters
@@ -21,7 +12,7 @@ func ValidateParentheses(str string) {
 	stack := make([]int, n)
 
 	for _, char := range arr {
-		idx := pos(chars[:], char)
+		idx := Pos(chars[:], char)
 
 		if idx == -1 {
 			fmt.Printf("String is not valid\n")

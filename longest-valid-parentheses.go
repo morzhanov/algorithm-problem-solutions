@@ -8,16 +8,30 @@ import (
 // given a string containing just the characters '(' and ')',
 // find the length of the longest valid (well-formed) parentheses substring.
 func LongestValidParentheses(arr []int) {
-	sum := 0
+	arr := []rune(str)
 	n := len(arr)
-	for _, val := range arr {
-		sum += val
-	}
-	expectedSum := n * (1 + n) / 2
+	chars := [6]rune{'(', ')', '{', '}', '[', ']'}
+	stack := make([]int, n)
 
-	if sum != expectedSum {
-		fmt.Printf("Duplicate: %v\n", n-(expectedSum-sum))
-	} else {
-		fmt.Printf("Duplicate not found\n")
+	for _, char := range arr {
+		idx := Pos(chars[:], char)
+
+		if idx == -1 {
+			fmt.Printf("String is not valid\n")
+			return
+		}
+
+		if idx%2 == 0 {
+			stack = append(stack, idx+1)
+		} else {
+			stackN := len(stack)
+			curr := stack[stackN-1]
+			stack = stack[:stackN-1]
+			if curr != idx {
+				fmt.Printf("String is not valid\n")
+				return
+			}
+		}
 	}
+	fmt.Printf("String is valid\n")
 }
