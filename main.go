@@ -18,27 +18,35 @@ func main() {
 	FindPairWithGivenSumInArray(arr[:], 8)
 	fmt.Printf("\n")
 
-	arr2 := [20]int{1, -4, 4, 2, 2, -2, 4, 5, -8, -4, 2, 3, 5, -6, 1, 2, -9, -2, 4, 5}
-	FindAllSubarraysWithZeroSum(arr2[:])
+	arr = [10]int{1, -4, 4, 2, 2, -2, 4, 5, -8, -4}
+	FindAllSubarraysWithZeroSum(arr[:])
 	fmt.Printf("\n")
 
-	arr3 := [8]int{1, 2, 3, 4, 4, 5, 6, 7}
-	FindDuplicateElementInLimitedRangeArray(arr3[:])
+	arr = [10]int{1, 2, 3, 4, 4, 5, 6, 7, 8, 9}
+	FindDuplicateElementInLimitedRangeArray(arr[:])
 	fmt.Printf("\n")
 
 	str := "(){{{{}}}}"
-	str2 := "{{{({}){([()])}}}}"
-	str3 := "{{{{}]}}}"
 	ValidateParentheses(str)
-	ValidateParentheses(str2)
-	ValidateParentheses(str3)
+	str = "{{{({}){([()])}}}}"
+	ValidateParentheses(str)
+	str = "{{{{}]}}}"
+	ValidateParentheses(str)
 	fmt.Printf("\n")
 
-	str4 := "(((())))(((())))"
-	str5 := "(((()))))(())"
-	str6 := "(((())))(((((())))))"
-	LongestValidParentheses(str4)
-	LongestValidParentheses(str5)
-	LongestValidParentheses(str6)
+	str = "(((())))(((((())))))"
+	LongestValidParentheses(str)
+	str = "(((()))))(())"
+	LongestValidParentheses(str)
+	str = "(((())))(((())))"
+	LongestValidParentheses(str)
+	fmt.Printf("\n")
+
+	str = "Red rum sir is murder"
+	ValidPalindrome(str)
+	str = "Red rum sir is not murder"
+	ValidPalindrome(str)
+	str = ""
+	ValidPalindrome(str)
 	fmt.Printf("\n")
 }
