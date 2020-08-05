@@ -49,4 +49,8 @@ func main() {
 	str = ""
 	ValidPalindrome(str)
 	fmt.Printf("\n")
+
+	str = "qwertyghqydidapjdwoasodwja"
+	LongestSubstringWithoutRepeatingCharacters(str)
+	fmt.Printf("\n")
 }
