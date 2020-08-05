@@ -1,4 +1,4 @@
-package str
+package characters
 
 import (
 	"fmt"

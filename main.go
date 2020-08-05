@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"math/rand"
+
+	"github.com/morzhanov/algorithm-problem-solutions/characters"
 )
 
 func createArray() []int {
@@ -15,42 +17,42 @@ func createArray() []int {
 
 func main() {
 	arr := [10]int{1, 2, 4, 5, 2, 3, 5, 1, 2, 4}
-	FindPairWithGivenSumInArray(arr[:], 8)
+	characters.FindPairWithGivenSumInArray(arr[:], 8)
 	fmt.Printf("\n")
 
 	arr = [10]int{1, -4, 4, 2, 2, -2, 4, 5, -8, -4}
-	FindAllSubarraysWithZeroSum(arr[:])
+	characters.FindAllSubarraysWithZeroSum(arr[:])
 	fmt.Printf("\n")
 
 	arr = [10]int{1, 2, 3, 4, 4, 5, 6, 7, 8, 9}
-	FindDuplicateElementInLimitedRangeArray(arr[:])
+	characters.FindDuplicateElementInLimitedRangeArray(arr[:])
 	fmt.Printf("\n")
 
 	str := "(){{{{}}}}"
-	ValidateParentheses(str)
+	characters.ValidateParentheses(str)
 	str = "{{{({}){([()])}}}}"
-	ValidateParentheses(str)
+	characters.ValidateParentheses(str)
 	str = "{{{{}]}}}"
-	ValidateParentheses(str)
+	characters.ValidateParentheses(str)
 	fmt.Printf("\n")
 
 	str = "(((())))(((((())))))"
-	LongestValidParentheses(str)
+	characters.LongestValidParentheses(str)
 	str = "(((()))))(())"
-	LongestValidParentheses(str)
+	characters.LongestValidParentheses(str)
 	str = "(((())))(((())))"
-	LongestValidParentheses(str)
+	characters.LongestValidParentheses(str)
 	fmt.Printf("\n")
 
 	str = "Red rum sir is murder"
-	ValidPalindrome(str)
+	characters.ValidPalindrome(str)
 	str = "Red rum sir is not murder"
-	ValidPalindrome(str)
+	characters.ValidPalindrome(str)
 	str = ""
-	ValidPalindrome(str)
+	characters.ValidPalindrome(str)
 	fmt.Printf("\n")
 
 	str = "qwertyghqydidapjdwoasodwja"
-	LongestSubstringWithoutRepeatingCharacters(str)
+	characters.LongestSubstringWithoutRepeatingCharacters(str)
 	fmt.Printf("\n")
 }
