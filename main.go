@@ -62,4 +62,11 @@ func main() {
 	characters.FindPeakElement(arr[:])
 	arr = [10]int{7, 2, 3, 4, 5, 4, 3, 2, 1, 6}
 	characters.FindPeakElement(arr[:])
+	fmt.Printf("\n")
+
+	characters.GuessNumberHigherOrLower(10, 8)
+	characters.GuessNumberHigherOrLower(100, 43)
+	characters.GuessNumberHigherOrLower(500, 222)
+	characters.GuessNumberHigherOrLower(1000, 998)
+	fmt.Printf("\n")
 }
