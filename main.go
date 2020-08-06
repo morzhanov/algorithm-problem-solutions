@@ -5,6 +5,7 @@ import (
 	"math/rand"
 
 	"github.com/morzhanov/algorithm-problem-solutions/characters"
+	"github.com/morzhanov/algorithm-problem-solutions/matrix"
 )
 
 func createArray() []int {
@@ -15,7 +16,7 @@ func createArray() []int {
 	return values
 }
 
-func main() {
+func runCharacters() {
 	arr := [10]int{1, 2, 4, 5, 2, 3, 5, 1, 2, 4}
 	characters.FindPairWithGivenSumInArray(arr[:], 8)
 	fmt.Printf("\n")
@@ -69,4 +70,37 @@ func main() {
 	characters.GuessNumberHigherOrLower(500, 222)
 	characters.GuessNumberHigherOrLower(1000, 998)
 	fmt.Printf("\n")
+}
+
+func runMatrix() {
+	mx := [][]rune{
+		{'1', '1', '1', '1', '0'},
+		{'1', '1', '1', '1', '0'},
+		{'1', '1', '1', '1', '0'},
+		{'1', '1', '0', '0', '0'},
+		{'1', '1', '0', '0', '0'},
+	}
+	matrix.NumberOfIslands(mx)
+	mx = [][]rune{
+		{'1', '1', '1', '1', '1'},
+		{'1', '1', '1', '1', '1'},
+		{'1', '1', '0', '0', '0'},
+		{'1', '1', '0', '1', '0'},
+		{'1', '1', '0', '0', '0'},
+	}
+	matrix.NumberOfIslands(mx)
+	mx = [][]rune{
+		{'1', '1', '1', '1', '0'},
+		{'1', '1', '1', '1', '0'},
+		{'1', '1', '1', '1', '0'},
+		{'1', '1', '0', '0', '0'},
+		{'1', '1', '0', '0', '1'},
+	}
+	matrix.NumberOfIslands(mx)
+	fmt.Printf("\n")
+}
+
+func main() {
+	runCharacters()
+	runMatrix()
 }
