@@ -1,4 +1,4 @@
-package main
+package utils
 
 // Pos returns position of rune in the run array
 func Pos(arr []rune, val rune) int {

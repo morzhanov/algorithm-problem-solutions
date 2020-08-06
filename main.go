@@ -54,5 +54,7 @@ func main() {
 
 	str = "qwertyghqydidapjdwoasodwja"
 	characters.LongestSubstringWithoutRepeatingCharacters(str)
+	str = "abcabcdbb"
+	characters.LongestSubstringWithoutRepeatingCharacters(str)
 	fmt.Printf("\n")
 }
