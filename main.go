@@ -57,4 +57,9 @@ func main() {
 	str = "abcabcdbb"
 	characters.LongestSubstringWithoutRepeatingCharacters(str)
 	fmt.Printf("\n")
+
+	arr = [10]int{1, 2, 3, 4, 5, 4, 3, 2, 1, 1}
+	characters.FindPeakElement(arr[:])
+	arr = [10]int{7, 2, 3, 4, 5, 4, 3, 2, 1, 6}
+	characters.FindPeakElement(arr[:])
 }
