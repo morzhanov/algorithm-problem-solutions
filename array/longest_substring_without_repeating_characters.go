@@ -1,4 +1,4 @@
-package characters
+package array
 
 import (
 	"fmt"
@@ -7,9 +7,9 @@ import (
 	"github.com/morzhanov/algorithm-problem-solutions/utils"
 )
 
-// LongestSubstringWithoutRepeatingCharacters test
-// given a string, find the length of the longest substring without repeating characters
-func LongestSubstringWithoutRepeatingCharacters(str string) {
+// LongestSubstringWithoutRepeatingarray test
+// given a string, find the length of the longest substring without repeating array
+func LongestSubstringWithoutRepeatingarray(str string) {
 	if str == "" {
 		fmt.Printf("\"%v\" is empty\n", str)
 		return

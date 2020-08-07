@@ -1,11 +1,11 @@
-package characters
+package array
 
 import (
 	"fmt"
 )
 
 // LongestValidParentheses test
-// given a string containing just the characters '(' and ')',
+// given a string containing just the array '(' and ')',
 // find the length of the longest valid (well-formed) parentheses substring.
 func LongestValidParentheses(str string) {
 	arr := []rune(str)

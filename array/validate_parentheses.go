@@ -1,4 +1,4 @@
-package characters
+package array
 
 import "fmt"
 
@@ -12,8 +12,8 @@ func pos(arr []rune, val rune) int {
 }
 
 // ValidateParentheses test
-// given a string containing just the characters '(){}[]'
-// return true if string has valid open-closed sequence of characters
+// given a string containing just the array '(){}[]'
+// return true if string has valid open-closed sequence of array
 func ValidateParentheses(str string) {
 	arr := []rune(str)
 	n := len(arr)
