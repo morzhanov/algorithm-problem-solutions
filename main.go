@@ -70,6 +70,13 @@ func runCharacters() {
 	characters.GuessNumberHigherOrLower(500, 222)
 	characters.GuessNumberHigherOrLower(1000, 998)
 	fmt.Printf("\n")
+
+	str = "PAYPALISHIRING"
+	characters.ZigZagConversion(str, 2)
+	characters.ZigZagConversion(str, 3)
+	characters.ZigZagConversion(str, 4)
+	characters.ZigZagConversion(str, 5)
+	fmt.Printf("\n")
 }
 
 func runMatrix() {

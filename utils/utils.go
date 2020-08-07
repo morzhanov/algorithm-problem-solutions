@@ -16,6 +16,19 @@ func Pos(arr []rune, val rune) int {
 func PrintMatrix(arr [][]rune) {
 	for i := 0; i < len(arr); i++ {
 		fmt.Printf("%v\n", string(arr[i]))
+	}
+}
 
+// PrintMatrixInZigZag function prints matrix of runes in zig-zag style
+func PrintMatrixInZigZag(arr [][]rune, maxRowLen int) {
+	for i := 0; i < len(arr); i++ {
+		delimiter := maxRowLen/len(arr[i]) + 1
+		for j := 0; j < len(arr[i]); j++ {
+			fmt.Printf("%v", string(arr[i][j]))
+			for k := 0; k < delimiter; k++ {
+				fmt.Printf(" ")
+			}
+		}
+		fmt.Printf("\n")
 	}
 }
