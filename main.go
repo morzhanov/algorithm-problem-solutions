@@ -16,69 +16,6 @@ func createArray() []int {
 	return values
 }
 
-func runCharacters() {
-	arr := [10]int{1, 2, 4, 5, 2, 3, 5, 1, 2, 4}
-	characters.FindPairWithGivenSumInArray(arr[:], 8)
-	fmt.Printf("\n")
-
-	arr = [10]int{1, -4, 4, 2, 2, -2, 4, 5, -8, -4}
-	characters.FindAllSubarraysWithZeroSum(arr[:])
-	fmt.Printf("\n")
-
-	arr = [10]int{1, 2, 3, 4, 4, 5, 6, 7, 8, 9}
-	characters.FindDuplicateElementInLimitedRangeArray(arr[:])
-	fmt.Printf("\n")
-
-	str := "(){{{{}}}}"
-	characters.ValidateParentheses(str)
-	str = "{{{({}){([()])}}}}"
-	characters.ValidateParentheses(str)
-	str = "{{{{}]}}}"
-	characters.ValidateParentheses(str)
-	fmt.Printf("\n")
-
-	str = "(((())))(((((())))))"
-	characters.LongestValidParentheses(str)
-	str = "(((()))))(())"
-	characters.LongestValidParentheses(str)
-	str = "(((())))(((())))"
-	characters.LongestValidParentheses(str)
-	fmt.Printf("\n")
-
-	str = "Red rum sir is murder"
-	characters.ValidPalindrome(str)
-	str = "Red rum sir is not murder"
-	characters.ValidPalindrome(str)
-	str = ""
-	characters.ValidPalindrome(str)
-	fmt.Printf("\n")
-
-	str = "qwertyghqydidapjdwoasodwja"
-	characters.LongestSubstringWithoutRepeatingCharacters(str)
-	str = "abcabcdbb"
-	characters.LongestSubstringWithoutRepeatingCharacters(str)
-	fmt.Printf("\n")
-
-	arr = [10]int{1, 2, 3, 4, 5, 4, 3, 2, 1, 1}
-	characters.FindPeakElement(arr[:])
-	arr = [10]int{7, 2, 3, 4, 5, 4, 3, 2, 1, 6}
-	characters.FindPeakElement(arr[:])
-	fmt.Printf("\n")
-
-	characters.GuessNumberHigherOrLower(10, 8)
-	characters.GuessNumberHigherOrLower(100, 43)
-	characters.GuessNumberHigherOrLower(500, 222)
-	characters.GuessNumberHigherOrLower(1000, 998)
-	fmt.Printf("\n")
-
-	str = "PAYPALISHIRING"
-	characters.ZigZagConversion(str, 2)
-	characters.ZigZagConversion(str, 3)
-	characters.ZigZagConversion(str, 4)
-	characters.ZigZagConversion(str, 5)
-	fmt.Printf("\n")
-}
-
 func runMatrix() {
 	mx := [][]rune{
 		{'1', '1', '1', '1', '0'},
@@ -145,7 +82,101 @@ func runMatrix() {
 	fmt.Printf("\n")
 }
 
+func runCharacters() {
+	arr := [10]int{1, 2, 4, 5, 2, 3, 5, 1, 2, 4}
+	characters.FindPairWithGivenSumInArray(arr[:], 8)
+	fmt.Printf("\n")
+
+	arr = [10]int{1, -4, 4, 2, 2, -2, 4, 5, -8, -4}
+	characters.FindAllSubarraysWithZeroSum(arr[:])
+	fmt.Printf("\n")
+
+	arr = [10]int{1, 2, 3, 4, 4, 5, 6, 7, 8, 9}
+	characters.FindDuplicateElementInLimitedRangeArray(arr[:])
+	fmt.Printf("\n")
+
+	str := "(){{{{}}}}"
+	characters.ValidateParentheses(str)
+	str = "{{{({}){([()])}}}}"
+	characters.ValidateParentheses(str)
+	str = "{{{{}]}}}"
+	characters.ValidateParentheses(str)
+	fmt.Printf("\n")
+
+	str = "(((())))(((((())))))"
+	characters.LongestValidParentheses(str)
+	str = "(((()))))(())"
+	characters.LongestValidParentheses(str)
+	str = "(((())))(((())))"
+	characters.LongestValidParentheses(str)
+	fmt.Printf("\n")
+
+	str = "Red rum sir is murder"
+	characters.ValidPalindrome(str)
+	str = "Red rum sir is not murder"
+	characters.ValidPalindrome(str)
+	str = ""
+	characters.ValidPalindrome(str)
+	fmt.Printf("\n")
+
+	str = "qwertyghqydidapjdwoasodwja"
+	characters.LongestSubstringWithoutRepeatingCharacters(str)
+	str = "abcabcdbb"
+	characters.LongestSubstringWithoutRepeatingCharacters(str)
+	fmt.Printf("\n")
+
+	arr = [10]int{1, 2, 3, 4, 5, 4, 3, 2, 1, 1}
+	characters.FindPeakElement(arr[:])
+	arr = [10]int{7, 2, 3, 4, 5, 4, 3, 2, 1, 6}
+	characters.FindPeakElement(arr[:])
+	fmt.Printf("\n")
+
+	characters.GuessNumberHigherOrLower(10, 8)
+	characters.GuessNumberHigherOrLower(100, 43)
+	characters.GuessNumberHigherOrLower(500, 222)
+	characters.GuessNumberHigherOrLower(1000, 998)
+	fmt.Printf("\n")
+
+	str = "PAYPALISHIRING"
+	characters.ZigZagConversion(str, 2)
+	characters.ZigZagConversion(str, 3)
+	characters.ZigZagConversion(str, 4)
+	characters.ZigZagConversion(str, 5)
+	fmt.Printf("\n")
+
+	secret := "1234"
+	_guess := "4321"
+	characters.BullsAndCows(secret, _guess)
+	secret = "4567"
+	_guess = "4576"
+	characters.BullsAndCows(secret, _guess)
+	secret = "8762"
+	_guess = "1347"
+	characters.BullsAndCows(secret, _guess)
+	secret = "1234"
+	_guess = "5678"
+	characters.BullsAndCows(secret, _guess)
+	secret = "1234"
+	_guess = "1234"
+	characters.BullsAndCows(secret, _guess)
+	secret = "1122"
+	_guess = "2211"
+	characters.BullsAndCows(secret, _guess)
+	secret = "1212123"
+	_guess = "2221113"
+	characters.BullsAndCows(secret, _guess)
+	fmt.Printf("\n")
+
+	strs := []string{"abc", "abcd", "abcde", "abcdef"}
+	characters.LongestCommonPrefix(strs)
+	strs = []string{"abc", "abcd", "abcde", "abcdef", "a"}
+	characters.LongestCommonPrefix(strs)
+	strs = []string{"abc", "abcd", "abcde", "abcdef", "k"}
+	characters.LongestCommonPrefix(strs)
+	fmt.Printf("\n")
+}
+
 func main() {
-	runCharacters()
 	runMatrix()
+	runCharacters()
 }
