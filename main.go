@@ -186,6 +186,10 @@ func runArray() {
 	ratings = []int{3, 1, 2, 1, 1, 3}
 	array.Candy(ratings)
 	fmt.Printf("\n")
+
+	heights := []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
+	array.TrappingRainWatter(heights)
+	fmt.Printf("\n")
 }
 
 func main() {
