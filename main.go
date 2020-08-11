@@ -208,6 +208,10 @@ func runArray() {
 	array.HappyNumber(23)
 	array.HappyNumber(761)
 	fmt.Printf("\n")
+
+	words := []string{"word1", "word2", "word3", "word4", "word5", "word6"}
+	array.WordsShortestDistance(words, "word1", "word6")
+	fmt.Printf("\n")
 }
 
 func main() {
