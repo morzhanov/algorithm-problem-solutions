@@ -212,6 +212,10 @@ func runArray() {
 	words := []string{"word1", "word2", "word3", "word4", "word5", "word6"}
 	array.WordsShortestDistance(words, "word1", "word6")
 	fmt.Printf("\n")
+
+	arr3 := []int{2, 3, 1, 2, 4, 3}
+	array.MinimumSizeSubarraySum(arr3, 7)
+	fmt.Printf("\n")
 }
 
 func main() {
