@@ -202,6 +202,12 @@ func runArray() {
 	fmt.Printf("Permutations: %v\n", res)
 	fmt.Printf("\n")
 
+	array.HappyNumber(4)
+	array.HappyNumber(18)
+	array.HappyNumber(19)
+	array.HappyNumber(23)
+	array.HappyNumber(761)
+	fmt.Printf("\n")
 }
 
 func main() {
