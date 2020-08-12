@@ -1,5 +1,7 @@
 package dynamic
 
+import "fmt"
+
 // HouseRobber test
 // You are a professional robber planning to rob houses along a street.
 // Each house has a certain amount of money stashed,
@@ -10,6 +12,28 @@ package dynamic
 //
 // Given a list of non-negative integers representing the amount of money of each house,
 // determine the maximum amount of money you can rob tonight without alerting the police.
-func HouseRobber() {
+func HouseRobber(arr []int) {
+	houses := make([]int, 0)
 
+	if len(arr) == 0 {
+		fmt.Printf("Max amount of money to rob is: %v", 0)
+	}
+	if len(arr) == 1 {
+		fmt.Printf("Max amount of money to rob is: %v", arr[0])
+	}
+
+	if arr[0] > arr[1] {
+		houses = append(houses, arr[0])
+	} else {
+		houses = append(houses, arr[1])
+	}
+
+	curr := houses[0]
+	for i := 2; i < len(arr); i++ {
+		planned := arr[i-1] + arr[1+1]
+		if planned > curr {
+			curr = planned
+			houses[len(houses)- 1] = 
+		}
+	}
 }
