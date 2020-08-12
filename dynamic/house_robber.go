@@ -16,10 +16,10 @@ func HouseRobber(arr []int) {
 	houses := make([]int, 0)
 
 	if len(arr) == 0 {
-		fmt.Printf("Max amount of money to rob is: %v", 0)
+		fmt.Printf("Max amount of money to rob is: %v\n", 0)
 	}
 	if len(arr) == 1 {
-		fmt.Printf("Max amount of money to rob is: %v", arr[0])
+		fmt.Printf("Max amount of money to rob is: %v\n", arr[0])
 	}
 
 	if arr[0] > arr[1] {
@@ -28,12 +28,17 @@ func HouseRobber(arr []int) {
 		houses = append(houses, arr[1])
 	}
 
-	curr := houses[0]
 	for i := 2; i < len(arr); i++ {
-		planned := arr[i-1] + arr[1+1]
+		curr := arr[i-1]
+		planned := arr[i] + houses[i-2]
 		if planned > curr {
-			curr = planned
-			houses[len(houses)- 1] = 
+			houses = append(houses, planned)
+		} else {
+			houses = append(houses, curr)
 		}
 	}
+
+	fmt.Printf("Max amount of money to rob is: %v\n", houses[len(houses)-1])
+	// TODO: also whos houses numbers and amount
+	fmt.Printf("Houses: %v\n", houses)
 }

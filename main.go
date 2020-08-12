@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"math/rand"
 
+	"github.com/morzhanov/algorithm-problem-solutions/dynamic"
+
 	"github.com/morzhanov/algorithm-problem-solutions/array"
 	"github.com/morzhanov/algorithm-problem-solutions/matrix"
 )
@@ -215,6 +217,10 @@ func runArray() {
 
 	arr3 := []int{2, 3, 1, 2, 4, 3}
 	array.MinimumSizeSubarraySum(arr3, 7)
+	fmt.Printf("\n")
+
+	arr3 = []int{1, 3, 4, 4, 3, 3, 7, 2, 3, 4, 5, 1}
+	dynamic.HouseRobber(arr3)
 	fmt.Printf("\n")
 }
 
