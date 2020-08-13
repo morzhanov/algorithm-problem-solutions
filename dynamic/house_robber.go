@@ -39,6 +39,4 @@ func HouseRobber(arr []int) {
 	}
 
 	fmt.Printf("Max amount of money to rob is: %v\n", houses[len(houses)-1])
-	// TODO: also whos houses numbers and amount
-	fmt.Printf("Houses: %v\n", houses)
 }
